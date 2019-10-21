@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="princ">
+            <h1>Formulario</h1>   
+        </div>
+        <form name="formulario" onsubmit="return validar()" method="get">
+        <div class="cuadro">
+            <div class="titulo">
+                Nombre y <br>apellidos <a class="aste">*</a>
+            </div>
+            <fieldset class="formu"> 
+                <div class="caja">
+                    <span class="span">El nombre y los apellidos<br> son imprescindibles.</span>
+                    <input required="true" type="text" name="Nombre"><br>                    
+                    Nombre
+                    <br>                
+                    <input required="true" type="text" name="PrimerApellido"><br>
+                    Apellidos<br>
+                </div>
+            </fieldset>
+        </div>         
+        <div class="cuadro">
+            <div class="titulo">
+                Email <a class="aste">*</a>
+            </div>
+            <fieldset class="formu">
+            <div class="caja">
+                <input required="true" type="email" name="email"><br>    
+            </div>  
+        </div>
+        <div class="cuadro">
+            <div class="titulo">
+                Tel&eacute;fono <a class="aste">*</a>
+            </div>                           
+            <fieldset class="formu2">  
+                <div class="caja">
+                    <input type="tel" name="Fijo"><br> 
+                    Fijo
+                </div>
+            </fieldset>
+            <fieldset class="formu3">
+                <input required="true" type="tel" name="Movil"><br>
+                    M&oacute;vil 
+            </fieldset>  
+        </div> 
+        <div class="cuadro">
+            <div class="titulo">
+                Nombre usuario <a class="aste">*</a>
+            </div>                           
+            <fieldset class="formu">  
+                <div class="caja">
+                    <input required="true" type="text" name="Usuario"><br> 
+                        Nombre de usuario
+                </div>
+            </fieldset>
+        </div> 
+        <div class="cuadro">
+            <div class="titulo">
+                Fecha nacimiento <a class="aste">*</a>
+            </div>                           
+            <fieldset class="formu">
+                <input required="true" type="date" name="fechaNac"><br>
+                    Fecha de nacimiento 
+            </fieldset>  
+        </div>                                                                        
+        <hr>
+        <input class="enviar" type="submit" value="Enviar">
+        <input class="borrar" type="reset" value="Restablecer">
+        </form> 
+        <hr>
+        <script src="javascript.js"></script>
+    </body>
+</html>
