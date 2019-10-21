@@ -1,10 +1,15 @@
 // Jquery + ES6
 
-
-function validar(){
+//Validar telefono
+function validarFijo(){
     let telefono = document.forms["formulario"]["Fijo"].value;
-    console.log (telefono);
-    alert(telefono);
+    console.log(telefono);
+    if( !(telefono.match(/^\d{9}$/)) ) {
+        console.log("tele");
+        return false;
+    }else{
+        alert("Hola");
+    }
 }
 
 /*$(() => {
