@@ -1,33 +1,35 @@
-// Jquery + ES6
 
-//Validar telefono
-function validarFijo(){
-    let telefono = document.forms["formulario"]["Fijo"].value;
-    console.log(telefono);
-    if( !(telefono.match(/^\d{9}$/)) ) {
-        console.log("tele");
-        return false;
-    }else{
-        alert("Hola");
-    }
-}
-
-/*$(() => {
-    //Validar campo obligatorio
-    valor = document.getElementById("campo").value;
-    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+function validar(){
+    
+    //Validar telefono fijo
+    let telefonoFijo = document.forms["formulario"]["Fijo"].value;
+    console.log(telefonoFijo);
+    var campoIncorrecto = false;
+    if( !(telefonoFijo.match(/^\d{9}$/)) ) {
+        alert("Teléfono fijo incorrecto.");
+        campoIncorrecto = true;
         return false;
     }
-
+    //Validar móvil
+    let telefonoMovil = document.forms["formulario"]["Movil"].value;
+    console.log(telefonoMovil);
+    if( !(telefonoMovil.match(/^\d{9}$/)) ) {
+        alert("Móvil incorrecto.");
+        campoIncorrecto = true;
+        return false;
+    }
+    /*
     //Validar email
-    valor = document.getElementById("campo").value;
-    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
+    let email = document.forms("email").value;
+    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email)) ) {
+        alert("Email incorrecto.");
+        campoIncorrecto = true;
         return false;
+    }*/
+    if (!campoIncorrecto){
+        alert ("Formulario creado correctamente");
+    }else{
+        alert ("Formulario no creado");
     }
-
-    //Validar telefono
-    valor = document.getElementById("campo").value;
-    if( !(/^\d{9}$/.test(valor)) ) {
-        return false;
-    }
-  });*/
+    
+}
