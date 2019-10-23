@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    
     font-family: helvetica;
 }
 
@@ -24,13 +23,7 @@
 }
 
 .formu2 {
-    border: none;
-    float: left;
-    
-}
-.formu3 {
-    border: none;
-    
+    border: none;    
 }
 
 .cuadro {
@@ -143,4 +136,32 @@ input:focus {
 
 body{
     min-width: 1000px;
+}
+
+span#errorEmail {
+    float: right;
+    width: 60%;
+    visibility: hidden;
+    color: red;
+    font-size: 200%;
+}
+
+.formu3 {
+    border: none;
+}
+
+span#errorFijo {
+    float: right;
+    width: 60%;
+    visibility: hidden;
+    color: red;
+    font-size: 200%;
+}
+
+span#errorMovil {
+    float: right;
+    width: 60%;
+    visibility: hidden;
+    color: red;
+    font-size: 200%;
 }

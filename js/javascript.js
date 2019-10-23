@@ -5,31 +5,50 @@ function validar(){
     let telefonoFijo = document.forms["formulario"]["Fijo"].value;
     console.log(telefonoFijo);
     var campoIncorrecto = false;
+    var errorEmail = false;
+    var errorFijo = false;
+    var errorMovil = false;
     if( !(telefonoFijo.match(/^\d{9}$/)) ) {
-        alert("Teléfono fijo incorrecto.");
+        document.getElementById("errorFijo").style.visibility = "visible";
         campoIncorrecto = true;
-        return false;
+        errorFijo = true;
+    }else{
+        document.getElementById("errorFijo").style.visibility = "hidden";
     }
+
     //Validar móvil
     let telefonoMovil = document.forms["formulario"]["Movil"].value;
     console.log(telefonoMovil);
     if( !(telefonoMovil.match(/^\d{9}$/)) ) {
-        alert("Móvil incorrecto.");
+        document.getElementById("errorMovil").style.visibility = "visible";
         campoIncorrecto = true;
-        return false;
+        errorMovil = true;
+    }else{
+        document.getElementById("errorMovil").style.visibility = "hidden";
     }
-    /*
+    
     //Validar email
-    let email = document.forms("email").value;
-    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email)) ) {
-        alert("Email incorrecto.");
+    let email = document.forms["formulario"]["email"].value;
+    if(! (/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(email)) ) {
+        document.getElementById("errorEmail").style.visibility = "visible";
         campoIncorrecto = true;
-        return false;
-    }*/
+        errorEmail = true;
+    }else{
+        document.getElementById("errorEmail").style.visibility = "hidden";
+    }
+
+    //Aviso de formulario bien creado o no
     if (!campoIncorrecto){
         alert ("Formulario creado correctamente");
     }else{
         alert ("Formulario no creado");
     }
     
+    if(errorEmail || errorMovil || errorFijo){
+        campoIncorrecto = false;
+    }else{
+        document.getElementById("myForm").reset();
+    }
+    
+    return campoIncorrecto;
 }

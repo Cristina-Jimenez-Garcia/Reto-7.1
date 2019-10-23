@@ -32,7 +32,9 @@
             </div>
             <fieldset class="formu">
             <div class="caja">
-                <input required="true" type="email" name="email"><br>    
+                <input required="true" type="email" name="email"><br>
+                Email<br>
+                <span id="errorEmail">¡Email incorrecto!</span>
             </div>  
         </div>
         <div class="cuadro">
@@ -43,11 +45,14 @@
                 <div class="caja">
                     <input type="tel" name="Fijo"><br> 
                     Fijo
+                    
                 </div>
-            </fieldset>
-            <fieldset class="formu3">
                 <input required="true" type="tel" name="Movil"><br>
                     M&oacute;vil 
+            </fieldset>  
+            <fieldset class="formu3">
+                <span id="errorFijo">¡Tel&eacute;fono fijo incorrecto!</span>
+                <span id="errorMovil">¡Tel&eacute;fono m&oacute;vil incorrecto!</span>
             </fieldset>  
         </div> 
         <div class="cuadro">
